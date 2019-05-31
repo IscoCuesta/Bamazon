@@ -46,7 +46,6 @@ function run(){
             Buy();
         }else{
             connection.end()
-
             return true;
         }
     })
@@ -73,7 +72,7 @@ function Buy (){
             // Log all results of the SELECT statement
             stock = res[0].stock_quantity;
             price = res[0].price;
-            console.log(price);
+
 
             if(resp.quantity < stock){
                 console.log("your total is: $" + (price * parseInt(resp.quantity)));
